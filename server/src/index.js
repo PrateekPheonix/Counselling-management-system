@@ -4,6 +4,10 @@ const cors = require('cors')
 
 require('./db/mongoose.js')
 
+const studentRouter = require('./router/student')
+const counsellorRouter = require('./router/counsellor')
+const adminRouter = require('./router/admin')
+const loginRouter = require('./router/login')
 
 const app = express()
 
@@ -16,9 +20,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.send("Hello");
-});
+app.use(studentRouter)
+app.use(counsellorRouter)
+app.use(adminRouter)
+app.use(loginRouter)
 
 
 app.listen(port, () => {
