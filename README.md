@@ -1,3 +1,3 @@
-# Boys-Hostel-room-allotment
+# Counselling-Management-System
 
-A boys hostel room allotment website for ITW2
+This is an MERN stack application.
