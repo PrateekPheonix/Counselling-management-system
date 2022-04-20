@@ -1,0 +1,17 @@
+.left{
+    width: 35%;
+}
+.navContains > .upcoming {
+    background: var(--blue-transperant);
+}
+p.upcomingAppoint{
+    color: var(--black-one);
+    font-weight: var(--font-weight-medium);
+}
+.upcoming{
+    display: flex;
+}
+.upcomingCard{
+    margin-left: 8vw;
+    margin-right: 8vw;
+}

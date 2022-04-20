@@ -9,6 +9,7 @@ body{
 }
 :root {
   --blue-gradient: linear-gradient(180deg, #1ABCFE 0%, rgba(26, 188, 254, 0.6) 100%);
+  --blue-transperant : linear-gradient(180deg, rgba(26, 188, 254, 0.2) 0%, rgba(26, 188, 254, 0.12) 100%);
   --white-gradient: linear-gradient(180deg, #F6F6F6 0%, rgba(206, 206, 206, 0.4) 100%);
   --blue:  #1ABCFE;
   --white: #fff;
@@ -35,4 +36,19 @@ h1{
   color: var(--black);
   font-size: var(--font-size-heading);
   font-weight: var(--font-weight-heading);
+}
+a{
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+a:visited{
+  color: black;
+}
+a:hover{
+  color: #000;
+}
+p{
+  margin: 0;
+  word-spacing: 0.2vw;
 }

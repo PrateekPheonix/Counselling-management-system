@@ -1,0 +1,37 @@
+.navContainer{
+    background: var(--white-gradient);
+    padding-top: 15vh;
+    padding-left: 4vw;
+    padding-bottom: 11vh;
+    backdrop-filter: var(--backdrop-filter);
+    height: 74vh;
+}
+.navContainer > h2{
+    margin: 0;
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+}
+.navContainer > h5{
+    margin: 0;
+    font-size: var(--font-size-medium);
+    font-size: var(--font-weight-medium);
+    color: var(--black-one);
+}
+.navContains {
+    margin-top: 15vh;
+}
+.navContains > .navTag{
+    padding: 2vh 1.5vw;
+    border: var(--blue) solid 3px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    margin-top: 3vh;
+    margin-right: 3vw;
+}
+p{
+    font-size: var(--font-size-medium);
+}
+.bookAppoint {
+    margin-top: 20vh;
+}
