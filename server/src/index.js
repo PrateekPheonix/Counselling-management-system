@@ -9,6 +9,8 @@ const counsellorRouter = require('./router/counsellor')
 const adminRouter = require('./router/admin')
 const loginRouter = require('./router/login')
 
+const errorHandler = require('./helpers/errorHandler')
+
 const app = express()
 
 const port = process.env.PORT
@@ -20,11 +22,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 
+
 app.use(studentRouter)
 app.use(counsellorRouter)
 app.use(adminRouter)
 app.use(loginRouter)
 
+app.use(errorHandler)
 
 app.listen(port, () => {
     console.log("SERVER IS UP ON PORT", port)
