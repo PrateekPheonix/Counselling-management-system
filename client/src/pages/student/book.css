@@ -1,0 +1,7 @@
+.bookAppoint{
+    padding: 0vh 8vw;
+}
+.bookAppoint> form > h1{
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+}

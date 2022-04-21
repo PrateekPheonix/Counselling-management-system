@@ -1,0 +1,13 @@
+.pastLeft{
+    width: 30%;
+}
+.navContains > .past{
+    background: var(--blue-transperant) !important;
+}
+p.pastAppoint{
+    color: var(--black-one);
+    font-weight: var(--font-weight-medium);
+}
+.navContains > .upcoming {
+    background: transparent !important;
+}

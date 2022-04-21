@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import LeftNav from './dashboardNav'
+import LeftNav from './components/nav/dashboardNav'
 import './upcoming.css'
 import  UpcomingCard from './components/CardUpcoming/upcomingCard'
 import Nocard from './components/nocard/nocard'
