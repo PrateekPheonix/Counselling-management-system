@@ -1,0 +1,64 @@
+
+.login {
+    display: flex;
+}
+
+.rightSide {
+    background: var(--white-gradient);
+    width: 50%;
+    height: 100vh;
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: var(--border-radius-card);
+}
+
+.form-part {
+    margin-left: 15%;
+    margin-top: 15vh;
+}
+
+p {
+    color: var(--greyOne);
+    margin-bottom: 1vh;
+}
+
+.form-part input[type=text],
+.form-part input[type=password] {
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    padding: 1vh 2vw 1vh 0vw;
+    outline: none;
+    color: var(--greyOne);
+    margin-bottom: 5vh;
+}
+
+.form {
+    width: 75%;
+    margin-top: 12vh;
+}
+
+.form Button {
+    margin-left: 40%;
+    margin-top: 8vh;
+}
+
+.form .forgot button {
+    margin-top: 2vh;
+    margin-left: 25%;
+    color: var(--greyTwo);
+}
+
+.leftSide {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.leftSide Button {
+    margin-top: 3vh;
+}

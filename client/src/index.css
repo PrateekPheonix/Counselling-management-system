@@ -1,13 +1,54 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white);
+  font-family: 'Lato', sans-serif;
 }
+*{
+  margin: 0;
+}
+:root {
+  --blue-gradient: linear-gradient(180deg, #1ABCFE 0%, rgba(26, 188, 254, 0.6) 100%);
+  --blue-transperant : linear-gradient(180deg, rgba(26, 188, 254, 0.2) 0%, rgba(26, 188, 254, 0.12) 100%);
+  --white-gradient: linear-gradient(180deg, #F6F6F6 0%, rgba(206, 206, 206, 0.4) 100%);
+  --blue:  #1ABCFE;
+  --white: #fff;
+  --black-one: #575757;
+  --black-two: #212121;
+  --black: #000;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+  --backdrop-filter: blur(20px);
+  --border-radius-button: 4px;
+  --border-radius-card: 10px;
+
+  --font-size-heading: 2.25rem;
+  --font-size-semibold: 1.125rem;
+  --font-size-medium: .9375rem;
+  --font-size-text: .75rem;
+
+  --font-weight-heading: 900;
+  --font-weight-semibold: 700;
+  --font-weight-medium: 400;
+  --font-weight-text: 300;
+}
+h1{
+  color: var(--black);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+}
+a{
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+a:visited{
+  color: black;
+}
+a:hover{
+  color: #000;
+}
+p{
+  margin: 0;
+  word-spacing: 0.2vw;
 }
