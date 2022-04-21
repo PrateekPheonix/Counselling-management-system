@@ -1,7 +1,7 @@
 import React from 'react'
 import './upcomingCard.css'
 
-const upcomingCard = () => {
+const upcomingCard = ({ upcoming }) => {
   return (
     <>
     <div className="upcomingCard">

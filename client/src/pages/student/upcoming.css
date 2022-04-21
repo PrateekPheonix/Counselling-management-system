@@ -1,5 +1,5 @@
 .left{
-    width: 35%;
+    width: 45%;
 }
 .navContains > .upcoming {
     background: var(--blue-transperant);
@@ -14,4 +14,19 @@ p.upcomingAppoint{
 .upcomingCard{
     margin-left: 8vw;
     margin-right: 8vw;
+}
+.cardRight > p.tag {
+    margin-left: 19vw;
+    padding: 1.2vh 2vw;
+    background: var(--blue);
+    border-radius: var(--border-radius-button);
+}
+h1.approved{
+    margin-top: 3vh;
+}
+p.request{
+    margin-top: 3vh;
+}
+.rightUpcoming{
+    margin-top: 6vh;
 }

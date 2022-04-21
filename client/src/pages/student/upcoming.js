@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import LeftNav from './dashboardNav'
 import './upcoming.css'
 import  UpcomingCard from './components/CardUpcoming/upcomingCard'
+import Nocard from './components/nocard/nocard'
 
-const upcoming = () => {
+const Upcoming = () => {
+  // const [upcomings, setUpcomings] = useState([]);
+  //   useEffect(()=>{
+  //       const fetchData = async()=>{
+  //           const result = await readUpcomings();
+  //           console.log(result)
+  //           setUpcomings(result.upcomings)
+  //       }
+  //       fetchData()
+  //   }, [])
   return (
     <>
     <div className="upcoming">
@@ -11,11 +21,14 @@ const upcoming = () => {
     <LeftNav/>
     </div>
     <div className="rightUpcoming">
-      <UpcomingCard/>
+      <Nocard/>
+      {/* {upcomings.map(upcoming=>
+        <UpcomingCard key={upcoming._id} upcoming={upcoming}/>
+      )} */}
     </div>
     </div>
     </>
   )
 }
 
-export default upcoming
+export default Upcoming
