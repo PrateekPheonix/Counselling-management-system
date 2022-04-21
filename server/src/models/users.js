@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken');
 const Role = require('../helpers/role')
 
 const userSchema = new mongoose.Schema({
@@ -30,7 +31,19 @@ const userSchema = new mongoose.Schema({
         enum: [Role.Admin, Role.Counsellor, Role.Student],
         default: Role.Student,
     },
+    token: {
+        type: String,
+    },
 })
+
+userSchema.methods.generateAuthToken = async function () {
+    const user = this
+    const token = jwt.sign({ _id: user._id.toString(), role: user.role }, process.env.JWT_SECRET)
+    user.token = token
+    await user.save()
+    return token
+}
+
 
 // Hash the plain text password before saving
 userSchema.pre('save', async function (next) {
