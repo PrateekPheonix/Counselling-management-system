@@ -3,6 +3,7 @@ const authorize = require('../middleware/authorize')
 const Appointment = require('../models/appointment')
 const User = require('../models/users')
 const Role = require('../helpers/role')
+const sendEmail = require('../utils/sendemail')
 
 const router = new express.Router()
 
@@ -15,7 +16,7 @@ router.get('/student', authorize(Role.Student), async (req, res) => {
     }
 })
 
-router.post('/studentCreate', authorize(Role.Student), async (req, res) => {
+router.post('/student/create', authorize(Role.Student), async (req, res) => {
     const appointment = new Appointment(req.body)
 
     try {
@@ -27,10 +28,37 @@ router.post('/studentCreate', authorize(Role.Student), async (req, res) => {
     }
 })
 
-router.get('/studentRead', authorize(Role.Student), async (req, res) => {
+router.get('/student/read', authorize(Role.Student), async (req, res) => {
     try {
         const users = await Appointment.find({ requestedBy: req.user._id })
         res.send(users)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+
+router.post('/email/appointment/create', async (req, res) => {
+
+    try {
+
+        const { email } = req.body
+
+        const from = "bruh.teek25@gmail.com"
+        const to = email
+
+        const subject = "You Request for Appointment have been created"
+
+        const output = `
+        <h1>Your Session Has been Booked!!</h1>
+        `
+
+        // const output = `Sent mail`
+
+        sendEmail(to, from, subject, output)
+
+        res.send("Email sent successfully!")
+
     } catch (error) {
         res.status(500).send(error)
     }

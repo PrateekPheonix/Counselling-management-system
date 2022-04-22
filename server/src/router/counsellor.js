@@ -14,7 +14,7 @@ router.get('/counsellor', authorize(Role.Counsellor), async (req, res) => {
         res.status(500).send(error)
     }
 })
-router.get('/counsellorRead', authorize(Role.Counsellor), async (req, res) => {
+router.get('/counsellor/read', authorize(Role.Counsellor), async (req, res) => {
     try {
         const users = await Appointment.find({ assignedTo: req.user._id })
         res.send(users)
@@ -23,7 +23,7 @@ router.get('/counsellorRead', authorize(Role.Counsellor), async (req, res) => {
     }
 })
 
-router.put('/counsellorUpdate', authorize(Role.Counsellor), async (req, res) => {
+router.put('/counsellor/update', authorize(Role.Counsellor), async (req, res) => {
 
     await Appointment.findOneAndUpdate({ _id: req.body.id }, req.body, {
         new: true,
