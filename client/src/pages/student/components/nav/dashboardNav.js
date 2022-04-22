@@ -1,7 +1,7 @@
 import React from 'react'
 import './dashboardNav.css'
 import { Link } from 'react-router-dom'
-import Button from '../../Components/button/button'
+import Button from '../../../../Components/button/button'
 
 const dashboardNav = () => {
   return (
@@ -17,7 +17,7 @@ const dashboardNav = () => {
             </div>
             <div className="navTag past">
                 <Link to={"./past.js"}>
-                    <p>Past Appointments</p>
+                    <p className="pastAppoint">Past Appointments</p>
                 </Link>
             </div>
         </div>

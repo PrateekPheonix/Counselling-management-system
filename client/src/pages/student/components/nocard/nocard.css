@@ -1,0 +1,45 @@
+.nocard > h1.noAppoint{
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 8vh;
+}
+.nocard > h2.noAppoint{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--black-one);
+}
+.bookNowCard{
+    background: var(--white-gradient);
+    backdrop-filter: var(--backdrop-filter);
+    padding: 4vh 6vw;
+    margin-right: 6vw;
+    border-radius: var(--border-radius-card);
+    margin-top: 12vh;
+}
+.bookNowCard > h1.book{
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+.bookNowCard > p.book{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--black-one);
+}
+.bookNowBot > p.timeperiod{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 8vh;
+}
+p.timeperiod > span.consult{
+    color: var(--black-one);
+}
+.bookNowBot{
+    display: flex;
+}
+.bookNowBot > Button {
+    margin-left: 25vw;
+    height: 8vh;
+    margin-top: 5vh;
+}
