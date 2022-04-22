@@ -23,4 +23,17 @@ router.get('/counsellorRead', authorize(Role.Counsellor), async (req, res) => {
     }
 })
 
+router.put('/counsellorUpdate', authorize(Role.Counsellor), async (req, res) => {
+
+    await Appointment.findOneAndUpdate({ _id: req.body.id }, req.body, {
+        new: true,
+        runValidators: true,
+    })
+        .then((result) => {
+            res.send(result)
+        }).catch((err) => {
+            res.status(400).send(err)
+        });
+})
+
 module.exports = router
