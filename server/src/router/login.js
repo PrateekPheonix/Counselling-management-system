@@ -11,9 +11,9 @@ router.post('/signup', async (req, res) => {
     try {
         await user.save()
         const token = await user.generateAuthToken()
-        res.status(201).send({ user })
-    } catch (e) {
-        res.status(400).send(e)
+        res.status(201).send({ user, token })
+    } catch (err) {
+        res.status(400).send(err)
     }
 })
 
@@ -21,18 +21,19 @@ router.post('/login', async (req, res) => {
     try {
         const user = await User.findByCredentials(req.body.email, req.body.password)
         const token = await user.generateAuthToken()
-        res.status(201).send({ user })
-    } catch (e) {
-        res.status(400).send()
+        res.status(201).send({ user, token })
+    } catch (err) {
+        res.status(400).send(err)
     }
 })
 
 router.post('/logout', authorize(), async (req, res) => {
     try {
+        console.log(req.user)
         const user = await User.updateOne({ _id: req.user._id }, { $set: { token: "" } })
         res.send(user)
-    } catch (e) {
-        res.status(500).send()
+    } catch (err) {
+        res.status(500).send(err)
     }
 })
 

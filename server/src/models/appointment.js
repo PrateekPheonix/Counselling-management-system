@@ -11,10 +11,11 @@ const appointmentSchema = new mongoose.Schema({
         required: true,
     },
     assignedTo: {
-        type: Number,
+        type: mongoose.Schema.ObjectId,
     },
     requestedBy: {
-        type: String,
+        type: mongoose.Schema.ObjectId,
+        required: true,
     }
 }, {
     timestamps: true
