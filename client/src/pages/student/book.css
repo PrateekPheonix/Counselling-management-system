@@ -1,7 +1,49 @@
-.bookAppoint{
-    padding: 0vh 8vw;
+.bookppoint{
+    padding: 0vh 28vw;
 }
-.bookAppoint> form > h1{
+.bookppoint> form > h1{
     font-size: var(--font-size-heading);
     font-weight: var(--font-weight-heading);
+}
+.react-datetime-picker__wrapper{
+    width: 40vw;
+    padding: 1vh 2vw;
+}
+.react-datetime-picker__button{
+    margin-left: 4vw;
+}
+.react-datetime-picker__inputGroup{
+    padding-left: 2vw;
+}
+.react-datetime-picker__button:enabled{
+    visibility: hidden;
+}
+.datetime > h2 {
+    margin-top: 5vh;
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 1.5vh;
+}
+.description > input[type="p"] {
+    width: 39.5vw;
+    height: 18vh;
+}
+h2.reason{
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}
+.bookppoint > form > h1{
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+}
+.submitButton > input[type="submit"]{
+    padding: 2.5vh 3.5vw;
+    border: none;
+    background: var(--blue-gradient);
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 4vh;
 }

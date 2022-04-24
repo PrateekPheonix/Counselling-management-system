@@ -7,13 +7,15 @@ import Home from './pages/home/home';
 import Upcoming from './pages/student/upcoming';
 import Past from './pages/student/past';
 import Book from './pages/student/book';
+import UpcomingCounsellor from './pages/Counsellor/UpcomingCounsellor';
+import DashboardAdmin from './pages/admin/dashboardAdmin';
 
 function App() {
   return (
     <>
     <div className="app">
     <Router>
-    <Book/>
+    <DashboardAdmin/>
     </Router>
     </div>
     </>

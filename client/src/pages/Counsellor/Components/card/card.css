@@ -1,0 +1,37 @@
+.Card{
+    background: var(--white-gradient);
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: var(--border-radius-card);
+}
+.cardTop{
+    display: flex;
+}
+h2.date{
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+}
+p.time{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--black-one);
+}
+h1.approved > span.by{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--black-one);
+}
+h1.approved{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semibold);
+}
+p.request{
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--black-one);
+}
+p.requestDes{
+    font-size: var(--font-size-medium);
+}
+.cardAppoint{
+    padding: 5vh 8vw;
+}

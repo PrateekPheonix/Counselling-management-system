@@ -5,7 +5,7 @@
     padding-bottom: 11vh;
     backdrop-filter: var(--backdrop-filter);
     height: 74vh;
-    width: 65%;
+    width: 20%;
 }
 .navContainer > h2{
     margin: 0;
@@ -36,4 +36,12 @@ p{
 .bookAppoint {
     margin-top: 20vh;
     padding-left: 0vw !important;
+}
+.logout Button{
+    margin-top: 20vh;
+    color: white;
+    font-size: var(--font-size-medium);
+    background: var(--red-gradient);
+    padding: 1.8vh 2.5vw;
+    border-radius: var(--border-radius-button)
 }
