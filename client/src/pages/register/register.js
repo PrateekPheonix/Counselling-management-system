@@ -1,41 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../Components/button/button'
 import './register.css'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux';
+import { register } from '../../actions/userActions';
 
-function Register() {
-    const [data, setData] = useState({
-        name: "",
-        email: "",
-        password: "",
-        wingname: "",
-        website: "",
-        description: "",
-        logo: ""
-    });
-    const [error, setError] = useState("");
-    const navigate = useNavigate();
+function Register(props) {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const userRegister = useSelector(state => state.userRegister);
+    const { loading, userInfo, error } = userRegister;
+    const dispatch = useDispatch();
 
-    const handleChange = ({ currentTarget: input }) => {
-        setData({ ...data, [input.name]: input.value });
-    }
     //register function 
     const egister = async (e) => {
         e.preventDefault();
-        try {
-            const url = "";
-            await axios.post(url, data);
-            navigate("")
-        } catch (error) {
-            if (
-                error.response &&
-                error.response.status >= 400 &&
-                error.response.status <= 500
-            ) {
-                setError(error.response.data.message);
-            }
-        }
+        dispatch(register(name, email, password));
     }
     return (
         <>
@@ -48,8 +30,7 @@ function Register() {
                             <input
                                 type="text"
                                 name="name"
-                                value={data.name}
-                                onChange={handleChange}
+                                onChange={(e) => setName(e.target.value)}
                                 placeholder='Enter your BT number.'
                             />
                             <br />
@@ -57,8 +38,7 @@ function Register() {
                             <input
                                 type="text"
                                 name="email"
-                                value={data.email}
-                                onChange={handleChange}
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder='Enter college Email Id'
                             />
                             <br />
@@ -66,22 +46,21 @@ function Register() {
                             <input
                                 type="password"
                                 name="password"
-                                value={data.password}
-                                onChange={handleChange}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                             <br />
                             <Button
                                 buttonStyle="btn-normal"
-                                type="submit" 
+                                type="submit"
                                 onClick={egister}
-                                >Submit</Button>
+                            >Submit</Button>
                         </form>
                     </div>
                 </div>
                 <div className="right-side">
                     <div className="right">
                         <h1>Already Registered?</h1>
-                        <Link to=""><Button buttonStyle="btn-normal">Login</Button></Link>
+                        <Link to="/login"> <Button buttonStyle="btn-normal">Login</Button></Link>
                     </div>
                 </div>
             </div>

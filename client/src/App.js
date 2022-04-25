@@ -15,7 +15,12 @@ function App() {
     <>
     <div className="app">
     <Router>
-    <DashboardAdmin/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/dashboard" element={<DashboardAdmin/>}/>
+      </Routes>
     </Router>
     </div>
     </>
