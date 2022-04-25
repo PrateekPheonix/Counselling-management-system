@@ -37,7 +37,7 @@ const Login = ({ setLoginUser }) => {
                 <div className="leftSide">
                     <div className="leFt">
                         <h1>Not Registered yet?</h1>
-                        <Link to=""><Button buttonStyle="btn-normal">Register</Button></Link>
+                        <Link to="/register"><Button buttonStyle="btn-normal">Register</Button></Link>
                     </div>
                 </div>
                 <div className="rightSide">
