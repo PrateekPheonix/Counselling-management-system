@@ -3,21 +3,18 @@ import Button from '../../Components/button/button'
 import './register.css'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
-import { useSelector, useDispatch } from 'react-redux';
-import { register } from '../../actions/userActions';
+import Cookies from 'js-cookie';
 
 function Register(props) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const userRegister = useSelector(state => state.userRegister);
-    const { loading, userInfo, error } = userRegister;
-    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     //register function 
     const egister = async (e) => {
         e.preventDefault();
-        dispatch(register(name, email, password));
+        navigate("/dashboard")
     }
     return (
         <>

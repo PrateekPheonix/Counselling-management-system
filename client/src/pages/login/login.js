@@ -5,31 +5,15 @@ import axios from 'axios';
 import { useNavigate,Link } from "react-router-dom"
 
 const Login = ({ setLoginUser }) => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const [data, setData] = useState({ email: "", password: "" });
-	const [error, setError] = useState("");
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    const handlChange = ({ currentTarget: input }) => {
-        setData({ ...data, [input.name]: input.value });
-    };
 
     const lgoin = async (e) => {
         e.preventDefault();
-		try {
-			const url = "";
-			const { data: res } = await axios.post(url, data);
-			localStorage.setItem("token", res.data);
-			window.location = "";
-		} catch (error) {
-			if (
-				error.response &&
-				error.response.status >= 400 &&
-				error.response.status <= 500
-			) {
-				setError(error.response.data.message);
-			}
-		}
+		navigate("/dashboard")
     }
     return (
         <>
@@ -49,8 +33,7 @@ const Login = ({ setLoginUser }) => {
                             <input
                                 type="text"
                                 name="email"
-                                value={data.email}
-                                onChange={handlChange}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                                 placeholder='Enter college email id' />
                             <br />
@@ -58,8 +41,7 @@ const Login = ({ setLoginUser }) => {
                             <input
                                 type="password"
                                 name="password"
-                                value={data.password}
-                                onChange={handlChange}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required
                                 placeholder='' />
                             <br />

@@ -9,8 +9,15 @@ import Past from './pages/student/past';
 import Book from './pages/student/book';
 import UpcomingCounsellor from './pages/Counsellor/UpcomingCounsellor';
 import DashboardAdmin from './pages/admin/dashboardAdmin';
+import Dashboard from './pages/dashboard';
+import Cookie from 'js-cookie';
 
 function App() {
+
+  // var role = document.cookie.split('; ').find(row => row.startsWith('userRole=')).split('=')[1];
+  // if (window.location.pathname==="/login"||window.location.pathname==="/register"){
+  //   Cookie.set('userRole', null);
+  // }
   return (
     <>
     <div className="app">
@@ -19,7 +26,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/dashboard" element={<DashboardAdmin/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/dashboardStudent" element={<Upcoming/>}/>
       </Routes>
     </Router>
     </div>
