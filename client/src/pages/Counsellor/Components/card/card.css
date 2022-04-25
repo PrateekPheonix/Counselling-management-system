@@ -2,6 +2,7 @@
     background: var(--white-gradient);
     backdrop-filter: var(--backdrop-filter);
     border-radius: var(--border-radius-card);
+    width: 65vw;
 }
 .cardTop{
     display: flex;

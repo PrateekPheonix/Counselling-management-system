@@ -16,3 +16,38 @@
     border-radius: var(--border-radius-card);
     width: 80%;
 }
+.assignTo > p{
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-medium);
+    width: 10vw;
+}
+.assignTo{
+    display: flex;
+}
+input[type="email"]{
+    background: transparent;
+    border: solid 2px black;
+    margin-left: 1.2vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 3vh;
+}
+input[type="email"]:focus{
+    outline: none;
+}
+.assignTo > form{
+    margin-top: 0vh;
+}
+input[type="submit"]{
+    background: var(--blue-gradient);
+    border: none;
+    color: var(--black);
+    padding: 2vh 3vw;
+    border-radius: var(--border-radius-button);
+    cursor: pointer;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    margin-left: 4vw;
+    margin-top: 3vh;
+}

@@ -1,45 +1,25 @@
 import React from 'react'
-import UpcomingCard from '../student/components/CardUpcoming/upcomingCard'
-import CardNew from './components/card/CardNew'
-import './dashboardAdmin.css'
-import NameDisplay from './components/NameDisplay/NameDisplay'
+import Navbar from './Components/Nav/navbar'
 import Button from '../../Components/button/button'
-import { useNavigate, Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
+import Card from './Components/card/card'
 
-const DashboardAdmin = () => {
-  const navigate = useNavigate();
+const DashboardCounsellor = () => {
   return (
     <>
-    <div className="adminDashborad">
+    <div className="DashboardCounsellor">
     <div className="tabs">
         <h1>Name</h1>
-        <p>Admin</p>
+        <p>Counsellor</p>
        <Tabs className="parentNav">
-         <Tab label="Students" className="childNav">
+         <Tab label="Upcoming Appointments" className="childNav">
            <div>
-             <NameDisplay/>
+             <Card/>
            </div>
          </Tab>
-         <Tab label="Counsellor" className="childNav">
+         <Tab label="Past Apppointments" className="childNav">
            <div>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-           </div>
-         </Tab>
-         <Tab label="New Requests" className="childNav">
-           <div className="cardnew">
-             <CardNew/>
-           </div>
-         </Tab>
-         <Tab label="Appointments">
-           <div>
-             <UpcomingCard/>
+             <Card/>
            </div>
          </Tab>
        </Tabs>
@@ -97,4 +77,5 @@ const Tab = props =>{
   )
 }
 
-export default DashboardAdmin
+
+export default DashboardCounsellor

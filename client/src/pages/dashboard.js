@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
-import Upcoming from './student/upcoming';
+import DashboardStudent from './student/DashboardStudent'
 import DashboardAdmin from './admin/dashboardAdmin';
-import UpcomingCounsellor from './Counsellor/UpcomingCounsellor';
+import DashboardCounsellor from './Counsellor/DashboardCounsellor';
 import Error from './error';
 import { UserContext } from "../Context/UserContext";
 
@@ -11,12 +11,12 @@ const Dashboard = () => {
 
   if (role == "Student") {
     return (
-      <Upcoming />
+      <DashboardStudent />
     )
   }
   else if (role == "Counsellor") {
     return (
-      <UpcomingCounsellor />
+      <DashboardCounsellor />
     )
   }
   if (role == "Admin") {

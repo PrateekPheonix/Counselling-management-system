@@ -22,8 +22,10 @@
     padding-top: 2vh;
     padding-bottom: 2vh;
     margin-top: 1vh;
-    background: var(--blue-gradient) !important;
+    background: var(--blue-transperant) !important;
     cursor: pointer;
+    font-size: var(--font-size-medium);
+    border-left: 2px solid var(--blue);
 }
 .Flex{
     display: flex;
@@ -47,4 +49,8 @@
     left: 85vw;
     top: -15vh;
     text-decoration: none !important; 
+}
+.active{
+    font-weight: var(--font-weight-semibold);
+    color: rgb(26, 26, 26);
 }

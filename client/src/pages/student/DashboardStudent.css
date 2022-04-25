@@ -27,3 +27,12 @@ p.request{
 .rightUpcoming{
     margin-top: 6vh;
 }
+.tags > h1{
+    margin-top: 4vh;
+    margin-left: 3vw;
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+}
+.tags > p{
+    
+}

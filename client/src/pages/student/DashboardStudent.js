@@ -1,51 +1,31 @@
-import React from 'react'
-import UpcomingCard from '../student/components/CardUpcoming/upcomingCard'
-import CardNew from './components/card/CardNew'
-import './dashboardAdmin.css'
-import NameDisplay from './components/NameDisplay/NameDisplay'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../../Components/button/button'
-import { useNavigate, Link } from "react-router-dom"
+import LeftNav from './components/nav/dashboardNav'
+import upcomingCard from './components/CardUpcoming/upcomingCard'
+import Nocard from './components/nocard/nocard'
+import './DashboardStudent.css'
 
-const DashboardAdmin = () => {
-  const navigate = useNavigate();
+const DashboardStudent = () => {
   return (
     <>
-    <div className="adminDashborad">
-    <div className="tabs">
-        <h1>Name</h1>
-        <p>Admin</p>
-       <Tabs className="parentNav">
+    <div className="DashboardStudent">
+      <div className="tags">
+      <h1>Name</h1>
+      <p>Student</p>
+    <Tabs className="parentNav">
          <Tab label="Students" className="childNav">
            <div>
-             <NameDisplay/>
+
            </div>
          </Tab>
          <Tab label="Counsellor" className="childNav">
-           <div>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-             <p className="counsellor">Counsellor</p>
-           </div>
-         </Tab>
-         <Tab label="New Requests" className="childNav">
-           <div className="cardnew">
-             <CardNew/>
-           </div>
-         </Tab>
-         <Tab label="Appointments">
-           <div>
-             <UpcomingCard/>
-           </div>
+           
          </Tab>
        </Tabs>
        <div className="logout">
-                <Link to="/login"><Button >Logout</Button></Link>
-            </div>
+          <Link to="/login"><Button >Logout</Button></Link>
+        </div>
       </div>
     </div>
     </>
@@ -96,5 +76,4 @@ const Tab = props =>{
     </React.Fragment>
   )
 }
-
-export default DashboardAdmin
+export default DashboardStudent
