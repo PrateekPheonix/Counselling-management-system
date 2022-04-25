@@ -9,9 +9,9 @@ import {
 const login = (email, password) => async (dispatch) => {
   dispatch({ type: USER_LOGIN_REQUEST, payload: { email, password } });
   try {
-    const { data } = await Axios.post("/login", { email, password });
+    const { data } = await Axios.post("http://localhost:5000/login", { email, password });
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-    Cookie.set('userInfo', JSON.stringify(data));
+    Cookie.set('userInfo', data.user.role);
   } catch (error) {
     dispatch({ type: USER_LOGIN_FAIL, payload: error.message });
   }
@@ -20,9 +20,10 @@ const login = (email, password) => async (dispatch) => {
 const register = (name, email, password) => async (dispatch) => {
   dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email, password } });
   try {
-    const { data } = await Axios.post("/signup", { name, email, password });
+    const { data } = await Axios.post("http://localhost:5000/signup", { name, email, password });
+    console.log(data.user.role)
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
-    Cookie.set('userInfo', JSON.stringify(data));
+    Cookie.set('userRole', data.user.role);
   } catch (error) {
     dispatch({ type: USER_REGISTER_FAIL, payload: error.message });
   }
