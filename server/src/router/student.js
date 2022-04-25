@@ -38,30 +38,5 @@ router.get('/student/read', authorize(Role.Student), async (req, res) => {
 })
 
 
-router.post('/email/appointment/create', async (req, res) => {
-
-    try {
-
-        const { email } = req.body
-
-        const from = "bruh.teek25@gmail.com"
-        const to = email
-
-        const subject = "You Request for Appointment have been created"
-
-        const output = `
-        <h1>Your Session Has been Booked!!</h1>
-        `
-
-        // const output = `Sent mail`
-
-        sendEmail(to, from, subject, output)
-
-        res.send("Email sent successfully!")
-
-    } catch (error) {
-        res.status(500).send(error)
-    }
-})
 
 module.exports = router

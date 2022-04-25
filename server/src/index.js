@@ -8,6 +8,7 @@ const studentRouter = require('./router/student')
 const counsellorRouter = require('./router/counsellor')
 const adminRouter = require('./router/admin')
 const loginRouter = require('./router/login')
+const emailRouter = require('./router/email')
 
 const errorHandler = require('./helpers/errorHandler')
 
@@ -27,6 +28,7 @@ app.use(studentRouter)
 app.use(counsellorRouter)
 app.use(adminRouter)
 app.use(loginRouter)
+app.use(emailRouter)
 
 app.use(errorHandler)
 
