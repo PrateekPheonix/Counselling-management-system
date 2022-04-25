@@ -1,36 +1,22 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
-import Button from './Components/button/button';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from './pages/register/register';
 import Login from './pages/login/login';
-import Home from './pages/home/home';
 import Upcoming from './pages/student/upcoming';
-import Past from './pages/student/past';
-import Book from './pages/student/book';
-import UpcomingCounsellor from './pages/Counsellor/UpcomingCounsellor';
-import DashboardAdmin from './pages/admin/dashboardAdmin';
 import Dashboard from './pages/dashboard';
-import Cookie from 'js-cookie';
 
 function App() {
 
-  // var role = document.cookie.split('; ').find(row => row.startsWith('userRole=')).split('=')[1];
-  // if (window.location.pathname==="/login"||window.location.pathname==="/register"){
-  //   Cookie.set('userRole', null);
-  // }
   return (
     <>
-    <div className="app">
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/dashboardStudent" element={<Upcoming/>}/>
-      </Routes>
-    </Router>
-    </div>
+      <div className="app">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   );
 }
