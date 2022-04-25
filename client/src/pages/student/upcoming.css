@@ -1,15 +1,9 @@
 .left{
     width: 45%;
 }
-.navContains > .upcoming {
-    background: var(--blue-transperant) !important;
-}
 p.upcomingAppoint{
     color: var(--black-one);
     font-weight: var(--font-weight-medium);
-}
-.navContains > .past {
-    background: transparent !important;
 }
 .upcoming{
     display: flex;

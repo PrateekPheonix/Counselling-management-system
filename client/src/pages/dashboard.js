@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import Upcoming from './student/upcoming';
 import DashboardAdmin from './admin/dashboardAdmin';
 import UpcomingCounsellor from './Counsellor/UpcomingCounsellor';
-import Error from './Error';
+import Error from './error';
 import { UserContext } from "../Context/UserContext";
 
 const Dashboard = () => {

@@ -33,10 +33,6 @@
 p{
     font-size: var(--font-size-medium);
 }
-.bookAppoint {
-    margin-top: 20vh;
-    padding-left: 0vw !important;
-}
 .logout Button{
     margin-top: 20vh;
     color: white;

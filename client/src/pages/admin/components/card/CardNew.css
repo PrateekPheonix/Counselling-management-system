@@ -1,0 +1,18 @@
+.accept > Button {
+    background: var(--blue-gradient);
+}
+.reject > Button {
+    background: var(--red-gradient);
+    margin-left: 2vw;
+    color: white;
+}
+.buttons{
+    display: flex;
+    margin-top: 4vh;
+}
+.NewCard{
+    background: var(--white-gradient);
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: var(--border-radius-card);
+    width: 80%;
+}

@@ -1,0 +1,4 @@
+.displayName > p{
+    background: var(--white-gradient);
+    padding: 1.2vh 2.5vw;
+}

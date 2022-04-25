@@ -1,0 +1,50 @@
+.left{
+    width: 90%;
+}
+.cardnew {
+    margin-left: 15%;
+}
+.tab-buttons{
+    flex-direction: column;
+    width: 10vw;
+    border: none;
+    background: var(--white-gradient);
+    padding: 10vh 5vw;
+    height: 73vh;
+    padding-left: 2vw;
+    padding-right: 7vw;
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: var(--border-radius-card);
+}
+.tab-buttons > button  {
+    border: none;
+    width: 15vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-top: 1vh;
+    background: var(--blue-gradient) !important;
+    cursor: pointer;
+}
+.Flex{
+    display: flex;
+}
+.tab-content{
+    margin-left: 5vw;
+}
+.tabs > h1{
+    font-size: var(--font-size-semibold);
+    font-weight: var(--font-weight-semibold);
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+.tabs > p{
+    margin: 0px;
+    margin-left: 3vw;
+    margin-bottom: 3vh;
+}
+.logout{
+    position: absolute;
+    left: 85vw;
+    top: -15vh;
+    text-decoration: none !important; 
+}
