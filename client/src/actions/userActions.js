@@ -20,7 +20,7 @@ const login = (email, password) => async (dispatch) => {
 const register = (name, email, password) => async (dispatch) => {
   dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email, password } });
   try {
-    const { data } = await Axios.post("http://localhost:5000/signup", { name, email, password });
+    const { data } = await Axios.post("/signup", { name, email, password });
     console.log(data.user.role)
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
     Cookie.set('userRole', data.user.role);
